@@ -1,0 +1,19 @@
+<h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_article_path(@article.user, @article) %> |
+<%= link_to 'Back', user_articles_path %>
+<%= link_to 'Promote your Ad',

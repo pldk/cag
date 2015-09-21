@@ -1,0 +1,22 @@
+<h1>Articles#new</h1>
+<p>Find me in app/views/articles/new.html.erb</p>
+
+<h2>Select your type of ad</h2>
+
+
+
+
+<%= form_for [@user, @user.articles.new] do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= link_to("Cancel", current_user , :class => "form-action btn btn-danger btn-rounded") %>
+    <%= f.button :submit , :class => 'btn btn-default btn-rounded',  input_html: { class: 'form-control rounded input-lg text-center no-border' } %>
+  </p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1>Articles#edit</h1>
+<p>Find me in app/views/articles/edit.html.erb</p>
+
+<%= render 'form' %>
+
+<!-- /posts/:post_id/comments/:id -->
+<%= link_to 'Show', [@article.user, @article] %> |
+<!-- /users/:user_id/articles/ -->
+<%= link_to 'Back', user_articles_path(@article.user) %>

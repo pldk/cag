@@ -1,9 +1,33 @@
 Rails.application.routes.draw do
+
+  get 'welcome/index'
+  devise_for :users
+
+  resources users do
+    resources articles
+  end
+
+  get 'pages/home'
+
+  get 'pages/new'
+
+  get 'pages/escort'
+
+  get 'pages/max_30_minutes'
+
+  get 'pages/contact'
+
+  get 'pages/search'
+
+  get 'pages/post_ad'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

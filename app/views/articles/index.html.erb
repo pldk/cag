@@ -1,0 +1,38 @@
+<h1>Articles#index</h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Post</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+
+
+        <td><%= article.title %></td>
+        <td><%= article.body %></td>
+
+
+        <!-- /users/:user_id/articles/:id -->
+        <td><%= link_to 'Show', [article.user, article] %></td>
+        <!-- /users/:user_id/articles/:id/edit -->
+        <td><%= link_to 'Edit', edit_user_article_path(article.user, article)%></td>
+        <!-- /users/:user_id/articles/:id -->
+        <td><%= link_to 'Destroy', [article.user, article], :confirm => 'Are you sure?', :method => :delete %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
